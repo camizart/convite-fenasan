@@ -19,12 +19,22 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  overflow: hidden;
-  background: radial-gradient(
-    ellipse at center,
-    #38231b 0%,
-    #171311 72%
-  );
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* FOTO DA OBRA COMO FUNDO DO SITE */
+  background:
+    linear-gradient(
+      rgba(27, 15, 11, 0.68),
+      rgba(27, 15, 11, 0.78)
+    ),
+    url("./20260311_-_ete_cic_xisto_wetland_0415.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   color: var(--cream);
 }
 
