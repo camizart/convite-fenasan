@@ -1,4 +1,4 @@
-
+```css
 * {
   box-sizing: border-box;
 }
@@ -20,8 +20,11 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at center, #38231b 0%, #171311 72%);
+  background: radial-gradient(
+    ellipse at center,
+    #38231b 0%,
+    #171311 72%
+  );
   color: var(--cream);
 }
 
@@ -35,7 +38,7 @@ body {
   width: 100%;
   aspect-ratio: 1.85 / 1;
   transform-style: preserve-3d;
-  transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
   cursor: pointer;
   animation: float 4s ease-in-out infinite;
 }
@@ -48,19 +51,18 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-
   border: 1.5px solid rgba(255, 224, 198, .85);
   border-radius: 18px;
 
-  /* FOTO COMO FUNDO + CAMADA TERRACOTA */
+  /* FOTO DO PROJETO + SOBREPOSIÇÃO TERRACOTA */
   background-image:
     linear-gradient(
       135deg,
-      rgba(105, 39, 24, .72) 0%,
-      rgba(201, 77, 43, .54) 48%,
-      rgba(74, 25, 15, .72) 100%
+      rgba(105, 39, 24, .58) 0%,
+      rgba(201, 77, 43, .38) 48%,
+      rgba(74, 25, 15, .62) 100%
     ),
-    url("foto-fenasan.jpg");
+    url("./20260311_-_ete_cic_xisto_wetland_0415.jpg");
 
   background-position: center;
   background-size: cover;
@@ -83,7 +85,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #171311;
+  background: var(--background);
   transform: translateY(-50%);
 }
 
@@ -99,7 +101,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* REFLEXO METÁLICO HOLOGRÁFICO */
+/* REFLEXO HOLOGRÁFICO */
 
 .foil {
   position: absolute;
@@ -137,6 +139,8 @@ body {
     transparent 75%
   );
 }
+
+/* CONTEÚDO */
 
 .ticket-content {
   position: relative;
@@ -227,7 +231,6 @@ h2 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   filter: drop-shadow(0 0 7px rgba(255, 221, 195, .45));
 }
 
@@ -255,7 +258,7 @@ h2 {
   color: #f7c4a7;
 }
 
-/* TEXTO INFERIOR DO TICKET */
+/* TEXTO INFERIOR */
 
 .serial {
   position: absolute;
@@ -300,9 +303,13 @@ h2 {
   }
 }
 
-/* ADAPTAÇÃO PARA CELULAR */
+/* RESPONSIVIDADE */
 
 @media (max-width: 500px) {
+  .scene {
+    width: 94vw;
+  }
+
   .ticket-face {
     border-radius: 12px;
   }
@@ -351,7 +358,7 @@ h2 {
   }
 }
 
-/* ACESSIBILIDADE: REDUZIR MOVIMENTO */
+/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
   .ticket,
@@ -363,3 +370,4 @@ h2 {
     transition: none;
   }
 }
+```
